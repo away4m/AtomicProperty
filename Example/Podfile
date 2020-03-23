@@ -2,9 +2,12 @@
 
 use_frameworks!
 platform :ios, '10.0'
-target 'AtomicProperty_Tests' do
+target 'AtomicApp' do
   pod 'AtomicProperty', path: '../'
 
-  pod 'Quick', '~> 2.2.0'
-  pod 'Nimble', '~>  8.0.5'
+  target 'AtomicProperty_Tests' do
+    inherit! :search_paths
+    pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~>  8.0.5'
+  end
 end

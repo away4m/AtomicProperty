@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AtomicProperty'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Atomic Property implementation backed with generic lock wrappers'
 
   # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.ios.deployment_target = '10.0'
-  s.swift_version = '5.0'
+  s.swift_version = '5.1'
   s.module_name   = 'AtomicProperty'
 
   s.source_files = 'AtomicProperty/Classes/**/*'
