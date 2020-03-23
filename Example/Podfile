@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 use_frameworks!
+platform :ios, '10.0'
 target 'AtomicProperty_Tests' do
-  pod 'AtomicProperty', :path => '../'
-  
-  pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0'
+  pod 'AtomicProperty', path: '../'
+
+  pod 'Quick', '~> 2.2.0'
+  pod 'Nimble', '~>  8.0.5'
 end

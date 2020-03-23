@@ -1,0 +1,27 @@
+PODS:
+  - AtomicProperty (0.1.0)
+  - Nimble (8.0.5)
+  - Quick (2.2.0)
+
+DEPENDENCIES:
+  - AtomicProperty (from `../`)
+  - Nimble (~> 8.0.5)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  AtomicProperty:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AtomicProperty: 9c28b322b9ff678a482fc72051a5515165f076e6
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+
+PODFILE CHECKSUM: e8564d6bc1a5f260cc065276b447705a5a066348
+
+COCOAPODS: 1.9.1

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Be sure to run `pod lib lint AtomicProperty.podspec' to ensure this is a
 # valid spec before submitting.
@@ -9,29 +11,34 @@
 Pod::Spec.new do |s|
   s.name             = 'AtomicProperty'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AtomicProperty.'
+  s.summary          = 'Atomic Property implementation backed with generic lock wrappers'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  # This description is used to generate tags and improve search results.
+  #   * Think: What does it do? Why did you write it? What is the focus?
+  #   * Try to keep it short, snappy and to the point.
+  #   * Write the description between the DESC delimiters below.
+  #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = <<~DESC
+    Atomic property is a wrapper class with generic user value.
+    It provides thread synchronization with custom lock implementations.
+    It introduces @Atomic property wrapper.
+  DESC
 
-  s.homepage         = 'https://github.com/alikiran/AtomicProperty'
+  s.homepage         = 'https://github.com/away4m/AtomicProperty'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'alikiran' => 'ali.kiran@wundermobility.com' }
-  s.source           = { :git => 'https://github.com/alikiran/AtomicProperty.git', :tag => s.version.to_s }
+  s.license          = { type: 'MIT', file: 'LICENSE' }
+  s.author           = { 'alikiran' => 'away4m@gmail.com' }
+  s.source           = { git: 'https://github.com/away4m/AtomicProperty.git', tag: s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
+  s.module_name   = 'AtomicProperty'
 
   s.source_files = 'AtomicProperty/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'AtomicProperty' => ['AtomicProperty/Assets/*.png']
   # }

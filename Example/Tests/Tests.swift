@@ -1,49 +1,56 @@
 // https://github.com/Quick/Quick
 
-import Quick
+@testable import AtomicProperty
 import Nimble
-import AtomicProperty
+import Quick
 
 class TableOfContentsSpec: QuickSpec {
+    var atomicProperty: AtomicProperty<Int>!
+    @Atomic(lock: SpinLock()) var age = 36
+    @Atomic(lock: DispatchSerial()) var userName = "Ali"
+    
+    let queue1 = DispatchQueue(label: "Queue1", qos: .userInteractive)
+    let queue2 = DispatchQueue(label: "Queue2", qos: .utility)
+    
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
+        beforeEach {
+            self.atomicProperty = AtomicProperty<Int>(value: 0, lock: Mutex())
+        }
+        describe("When executing in background") {
+            it("should end with initial value after balanced calls") {
+                for _ in 0 ..< 999999 {
+                    self.queue1.async { //Time consuming task here}
+                        self.atomicProperty.mutate { value in
+                            value - 1
+                        }
+                        self.age.mutate { value in
+                            value - 1
+                        }
+                        
+                        self.userName.mutate { value in
+                            "a"
+                        }
                     }
                 }
+                
+                for _ in 0 ..< 1000000 {
+                    self.queue2.async { //Time consuming task here}
+                        self.atomicProperty.mutate { value in
+                            value + 1
+                        }
+                        self.age.mutate { value in
+                            value + 1
+                        }
+                        
+                        self.userName.mutate { value in
+                            "b"
+                        }
+                    }
+                }
+                
+                expect(self.atomicProperty.value).toEventually(equal(1))
+                expect(self.age.value).toEventually(equal(37))
+                expect(self.userName.value).toEventually(equal("b"))
             }
         }
     }
