@@ -4,33 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AtomicProperty.xcscheme</key>
+		<key>AtomicProperty.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Nimble.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-AtomicApp.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-AtomicProperty_Tests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Quick.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>6F13695E06195A78EA8A95F8C7ED0D2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76AAC46E6525D03A077E17248A96A2D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B082275CB384DE0B2351AF9CA0E9958A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C82891EAB7293DBEE916B21F57E8474D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
