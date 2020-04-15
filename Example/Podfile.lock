@@ -1,6 +1,6 @@
 PODS:
   - AtomicProperty (1.0.0)
-  - Nimble (8.0.5)
+  - Nimble (8.0.7)
   - Quick (2.2.0)
 
 DEPENDENCIES:
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AtomicProperty: c4973039964ce018765de56deb43f9494bf20c3d
-  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
 PODFILE CHECKSUM: 97e108da2012da3f91344c3a29e1190ec622d6c4
