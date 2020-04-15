@@ -1,9 +1,9 @@
 # AtomicProperty
 
-[![CI Status](https://img.shields.io/travis/away4m/AtomicProperty.svg?style=flat)](https://travis-ci.org/github/away4m/AtomicProperty)
-[![Version](https://img.shields.io/cocoapods/v/AtomicProperty.svg?style=flat)](https://cocoapods.org/pods/AtomicProperty)
-[![License](https://img.shields.io/cocoapods/l/AtomicProperty.svg?style=flat)](https://cocoapods.org/pods/AtomicProperty)
-[![Platform](https://img.shields.io/cocoapods/p/AtomicProperty.svg?style=flat)](https://cocoapods.org/pods/AtomicProperty)
+![Travis](https://img.shields.io/travis/away4m/AtomicProperty?style=for-the-badge)
+![Cocoapods](https://img.shields.io/cocoapods/v/AtomicProperty?style=for-the-badge)
+[![License](https://img.shields.io/cocoapods/l/AtomicProperty.svg?style=for-the-badge)](https://cocoapods.org/pods/AtomicProperty)
+[![Platform](https://img.shields.io/cocoapods/p/AtomicProperty.svg?style=for-the-badge)](https://cocoapods.org/pods/AtomicProperty)
 
 ## Example
 
